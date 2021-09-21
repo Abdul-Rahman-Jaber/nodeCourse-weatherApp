@@ -8,7 +8,7 @@ const forecast = (latitude, longtitude , callback) => {
         } else if(body.error){
             callback('Unable to find the coordinates', undefined)
         } else {
-            const result = body.current.weather_descriptions[0] + ". Tempreture is "+ body.current.temperature + ". And feelsLike is : " + body.current.feelslike
+            const result = body.current.weather_descriptions[0] + ". Tempreture is "+ body.current.temperature + ". And feelsLike is : " + body.current.feelslike + "  the humidity is:   " + body.current.humidity
             callback(undefined, result)
         }
     })
